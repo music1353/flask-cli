@@ -1,9 +1,9 @@
 from app import app
-from flask import jsonify
-from config import BASE_DIR
-from flask import session, request, jsonify
+from flask import jsonify, session, request
+from config import BASE_DIR, client
 
-# mongo = PyMongo(app)
+# 連進MongoDB
+db = client['cgu_db']
 
 @app.route('/')
 def index():
