@@ -3,7 +3,7 @@ from flask import jsonify, session, request
 from config import BASE_DIR, client
 
 # 連進MongoDB
-db = client['cgu_db']
+db = client['name_db']
 
 @app.route('/')
 def index():
