@@ -1,6 +1,8 @@
 from app import app
-from flask import jsonify, session, request
+from flask import jsonify, session, request, Blueprint
 from config import BASE_DIR, client
+
+base = Blueprint('base', __name__)
 
 # 連進MongoDB
 db = client['name_db']
